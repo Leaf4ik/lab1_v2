@@ -1,18 +1,7 @@
 import parsing
-urlKafedra = "https://www.omgtu.ru/general_information/the-structure/the-department-of-university.php"
-domTegKafedra = "ul"
-fileKafedra = "kafedraInfo.txt"
-
-urlFakultets = "https://omgtu.ru/general_information/faculties/"
-domTegFakultets = "li"
-fileFakultets = "FakultetsInfo.txt"
-
-urlStaff = "https://omgtu.ru/ecab/persons/index.php?b=10"
-domTegStaff = "a"
-fileStaff = "staffInfo.txt"
-
+import toolsParsing as tools
 
 if __name__ == "__main__":
-    parsing.Parsing(urlKafedra, domTegKafedra, fileKafedra)
-    parsing.Parsing(urlFakultets, domTegFakultets, fileFakultets)
-    parsing.Parsing(urlStaff, domTegStaff, fileStaff)
+    parsing.parsing(tools.urlKafedra, tools.domTegKafedra, tools.fileKafedra)
+    parsing.parsing(tools.urlFakultets, tools.domTegFakultets, tools.fileFakultets)
+    parsing.parsing(tools.urlStaff, tools.domTegStaff, tools.fileStaff)

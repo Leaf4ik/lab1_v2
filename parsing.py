@@ -6,7 +6,7 @@ def writeToFile(filename, list):
     with open(filename, "w") as file:
         for i in list:
             if len(i) > 1:
-                file.write(i.strip() + "\n")
+                file.write(i.strip().replace("\n\n", "") + "\n")
 
 
 def getText(list):
@@ -16,7 +16,7 @@ def getText(list):
     return arr
 
 
-def Parsing(url, domTeg, fileName):
+def parsing(url, domTeg, fileName):
     page = requests.get(url)
     soup = BeautifulSoup(page.text, "lxml")
     list = soup.find("div", {"id": "pagecontent"}).findAll(domTeg)
