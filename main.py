@@ -1,7 +1,7 @@
 import parsing
-import toolsParsing as tools
 
 if __name__ == "__main__":
-    parsing.parsing(tools.urlKafedra, tools.domTegKafedra, tools.fileKafedra)
-    parsing.parsing(tools.urlFakultets, tools.domTegFakultets, tools.fileFakultets)
-    parsing.parsing(tools.urlStaff, tools.domTegStaff, tools.fileStaff)
+    urlKafedra = "https://www.omgtu.ru/general_information/the-structure/the-department-of-university.php"
+    domTegKafedra = "ul"
+    fileKafedra = "kafedraInfo.txt"
+    parsing.parsing(urlKafedra, domTegKafedra, fileKafedra)
